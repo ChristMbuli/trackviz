@@ -1,6 +1,6 @@
 <?php
 // Connexion à la base de données MySQL
-$mysqli = new mysqli("bg5zs2ozur1yedyhjewm-mysql.services.clever-cloud.com", "uk9nk1j4dbvbyild", "bg5zs2ozur1yedyhjewm", "bg5zs2ozur1yedyhjewm");
+$mysqli = new mysqli("big9zr6gztwcr6rs0ryr-mysql.services.clever-cloud.com", "ueoaj9ywgtalblbi", "geeNq3qH4E3DyOzzl6As", "big9zr6gztwcr6rs0ryr");
 
 // Vérifier la connexion
 if ($mysqli->connect_error) {
