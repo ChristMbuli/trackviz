@@ -1,3 +1,4 @@
+<?php require('./api.php'); ?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -16,46 +17,18 @@
                 <img src="./logo.png" alt="Logo" class="w-40 h-30">
             </div>
             <h1 class="text-2xl font-semibold text-center text-gray-500 mt-8 mb-6">Nombre Visiteurs :
-                <span id="dailyVisits">Chargement...</span>
+                <?= $daily_visits ?>
             </h1>
             <p class="text-sm text-gray-600 text-justify mt-8 mb-6">Plongez dans TrackViz : la solution de suivi des
                 visiteurs par excellence. Suivez les activités de vos visiteurs en temps réel, explorez les données avec
-                VizBoard pour optimiser l'expérience utilisateur. Découvrez TrackViz, la création de <a href="#"
-                    class="underline">Christ
+                VizBoard pour optimiser l'expérience utilisateur. Découvrez TrackViz, la création de <a href="https://portfolio-frontend-three-kappa.vercel.app/">Christ
                     Mbuli</a>.</p>
 
 
-            <p class="text-xs text-gray-600 text-center mt-8">&copy; 2024 <a href="underline">Christ Mbuli</a> , All
-                rights reserved.
+            <p class="text-xs text-gray-600 text-center mt-8">&copy; 2024 Christ Mbuli, All rights reserved.
             </p>
         </div>
     </div>
-
-    <script>
-    // Fonction pour mettre à jour le nombre de visites
-    function updateDailyVisits() {
-        // Effectuer une requête AJAX pour récupérer le nombre de visites actuel
-        var xhr = new XMLHttpRequest();
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === XMLHttpRequest.DONE) {
-                if (xhr.status === 200) {
-                    // Mettre à jour le contenu de la balise span avec le nombre de visites
-                    document.getElementById("dailyVisits").textContent = xhr.responseText;
-                } else {
-                    console.error('Erreur lors de la récupération du nombre de visites:', xhr.status);
-                }
-            }
-        };
-        xhr.open("GET", "https://app-9d2d5665-2b61-4d0e-85e7-ac47fd8b989d.cleverapps.io/api.php", true);
-        xhr.send();
-    }
-
-    // Appeler la fonction pour la première fois
-    updateDailyVisits();
-
-    // Mettre à jour le nombre de visites toutes les 5 secondes
-    setInterval(updateDailyVisits, 5000); // 5000 millisecondes = 5 secondes
-    </script>
 </body>
 
 </html>
