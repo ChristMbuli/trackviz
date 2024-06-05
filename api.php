@@ -1,6 +1,6 @@
 <?php
 // Connexion à la base de données MySQL
-$mysqli = new mysqli("localhost", "root", "", "user_track");
+$mysqli = new mysqli("big9zr6gztwcr6rs0ryr-mysql.services.clever-cloud.com", "ueoaj9ywgtalblbi", "ueoaj9ywgtalblbi", "big9zr6gztwcr6rs0ryr");
 
 // Vérifier la connexion
 if ($mysqli->connect_error) {
