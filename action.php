@@ -46,7 +46,7 @@
                 }
             }
         };
-        xhr.open("GET", "./api.php", true);
+        xhr.open("GET", "https://app-9d2d5665-2b61-4d0e-85e7-ac47fd8b989d.cleverapps.io/api.php", true);
         xhr.send();
     }
 
